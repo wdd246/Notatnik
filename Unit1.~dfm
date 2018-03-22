@@ -1,0 +1,107 @@
+object Form1: TForm1
+  Left = 265
+  Top = 184
+  Width = 1305
+  Height = 675
+  Caption = 'NotAdamTnik'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object tresc: TMemo
+    Left = 0
+    Top = 0
+    Width = 1289
+    Height = 616
+    Align = alClient
+    Color = clBlack
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clGreen
+    Font.Height = -15
+    Font.Name = 'Arial Rounded MT Bold'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+  end
+  object MainMenu1: TMainMenu
+    Left = 1224
+    Top = 8
+    object Plik1: TMenuItem
+      Caption = '&Plik'
+      object Nowy1: TMenuItem
+        Caption = '&Nowy ctrl+n'
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object Otworz1: TMenuItem
+        Caption = '&Otworz ctrl+o'
+        OnClick = Otworz1Click
+      end
+      object Zapisz1: TMenuItem
+        Caption = 'Zapi&sz ctrl+s'
+        OnClick = Zapisz1Click
+      end
+      object Zapiszjako1: TMenuItem
+        Caption = 'Za&pisz jako'
+        OnClick = Zapiszjako1Click
+      end
+      object N2: TMenuItem
+        Caption = '-'
+      end
+      object Zakocz1: TMenuItem
+        Caption = '&Zako'#324'cz'
+      end
+    end
+    object Edycja1: TMenuItem
+      Caption = '&Edycja'
+      object Wytnijctrlx1: TMenuItem
+        Caption = 'Wytnij ctrl+&x'
+      end
+      object Kopiujctrlc1: TMenuItem
+        Caption = 'Kopiuj ctrl+&c'
+      end
+      object Wklejctrlv1: TMenuItem
+        Caption = 'Wklej ctrl+&v'
+      end
+    end
+    object Formatuj1: TMenuItem
+      Caption = '&Formatuj'
+      object Zawijaniewieszy1: TMenuItem
+        Caption = 'Zawija&nie wieszy'
+      end
+      object Czcionka1: TMenuItem
+        Caption = '&Czcionka'
+      end
+    end
+    object Pomoc1: TMenuItem
+      Caption = '&Pomoc'
+      object Informacje1: TMenuItem
+        Caption = '&Informacje'
+        object Oprogramie1: TMenuItem
+          Caption = 'O programie'
+        end
+        object Autor1: TMenuItem
+          Caption = 'Autor'
+        end
+      end
+    end
+  end
+  object OpenDialog2: TOpenDialog
+    Filter = 'Pliki tekstowe (txt)|*.txt|Wszystkie pliki|*.*'
+    Left = 1192
+    Top = 8
+  end
+  object SaveDialog1: TSaveDialog
+    Filter = 'Plik tekstowy (txt)|*.txt|Wszystkie pliki|*.*'
+    Options = [ofOverwritePrompt, ofHideReadOnly, ofEnableSizing]
+    Left = 1160
+    Top = 8
+  end
+end

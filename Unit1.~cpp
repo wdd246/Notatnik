@@ -1,0 +1,62 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+        : TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm1::Otworz1Click(TObject *Sender)
+{
+
+
+if (OpenDialog2->Execute())
+{
+try{
+ tresc->Lines->LoadFromFile(OpenDialog2->FileName);
+ }
+ catch(...)
+ {
+  ShowMessage("B³¹d ! Upewnij siê czy to dobry plik yjzlu");
+ }
+}
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Zapisz1Click(TObject *Sender)
+{
+ if (SaveDialog1->Execute())
+{
+try{
+ tresc->Lines->SaveToFile(SaveDialog1->FileName);
+ }
+ catch(...)
+ {
+  ShowMessage("B³¹d ! Zapis siê nie uda³");
+ }
+}
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Zapiszjako1Click(TObject *Sender)
+{
+   if (SaveDialog1->Execute())
+{
+try{
+ tresc->Lines->SaveToFile(SaveDialog1->FileName);
+ }
+ catch(...)
+ {
+  ShowMessage("B³¹d ! Zapis siê nie uda³");
+ }
+}
+}
+//---------------------------------------------------------------------------
